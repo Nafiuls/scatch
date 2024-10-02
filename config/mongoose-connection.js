@@ -8,3 +8,5 @@ mongoose
   .catch((error) => {
     console.log('error connecting', error.message);
   });
+
+module.exports = mongoose.connection;
