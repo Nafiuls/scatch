@@ -23,6 +23,10 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 dotenv.config();
 
+app.get('/', (req, res) => {
+  res.send('hello iam working');
+});
+
 app.use('/owners', ownersRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);

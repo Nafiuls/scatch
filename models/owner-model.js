@@ -6,7 +6,8 @@ const userSchema = mongoose.Schema({
     minlength: 3,
     trim: true,
   },
-  password: string,
+  email: String,
+  password: String,
   products: {
     type: Array,
     default: [],
@@ -15,4 +16,4 @@ const userSchema = mongoose.Schema({
   gstin: String,
 });
 
-module.exports = mongoose.model('user', userSchema);
+module.exports = mongoose.model('owner', userSchema);
